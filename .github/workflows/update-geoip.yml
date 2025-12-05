@@ -2,8 +2,11 @@ name: Update GeoIP Lists
 
 on:
   schedule:
-    - cron: '0 2 * * 0'  # Executa todo domingo às 2h da manhã
+    - cron: '0 2 * * 0'  # Executa todo domingo às 2h
   workflow_dispatch:      # Permite execução manual
+
+permissions:
+  contents: write  # Adiciona permissão de escrita
 
 jobs:
   generate:
@@ -12,14 +15,18 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Generate GeoIP RSC files
         run: |
           # Lista de países para bloquear
           PAISES="cn ru kp ir ua vn in id tr ro bg"
           
+          echo "Gerando arquivos GeoIP..."
+          
           for pais in $PAISES; do
-            echo "Gerando arquivo para $pais..."
+            echo "Processando $pais..."
             
             # Baixa a lista do IPdeny
             curl -s "http://www.ipdeny.com/ipblocks/data/countries/${pais}.zone" | \
@@ -29,15 +36,34 @@ jobs:
               print "/ip firewall address-list add list=malicioso address="$1" comment=\"GeoIP-"pais"\""
             }' > ${pais}.rsc
             
-            echo "✓ ${pais}.rsc gerado com $(wc -l < ${pais}.rsc) linhas"
+            if [ -f "${pais}.rsc" ]; then
+              LINHAS=$(wc -l < ${pais}.rsc)
+              echo "✓ ${pais}.rsc gerado com $LINHAS redes"
+            else
+              echo "✗ Erro ao gerar ${pais}.rsc"
+            fi
           done
           
-          # Cria um arquivo com data da última atualização
-          echo "# Última atualização: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" > LAST_UPDATE.txt
+          # Cria arquivo com data da última atualização
+          echo "Última atualização: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" > LAST_UPDATE.txt
+          
+          echo "Geração concluída!"
+          ls -lh *.rsc
           
       - name: Commit and push changes
         run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git config --local user.email "actions@github.com"
+          
+          # Adiciona os arquivos
           git add *.rsc LAST_UPDATE.txt
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update GeoIP lists - $(date +'%Y-%m-%d')" && git push)
+          
+          # Verifica se há mudanças para commitar
+          if git diff --staged --quiet; then
+            echo "Nenhuma mudança detectada, pulando commit"
+          else
+            echo "Commitando mudanças..."
+            git commit -m "Update GeoIP lists - $(date +'%Y-%m-%d %H:%M:%S')"
+            git push
+            echo "Push realizado com sucesso!"
+          fi
