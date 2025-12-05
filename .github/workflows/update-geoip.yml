@@ -1,0 +1,43 @@
+name: Update GeoIP Lists
+
+on:
+  schedule:
+    - cron: '0 2 * * 0'  # Executa todo domingo às 2h da manhã
+  workflow_dispatch:      # Permite execução manual
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Generate GeoIP RSC files
+        run: |
+          # Lista de países para bloquear
+          PAISES="cn ru kp ir ua vn in id tr ro bg"
+          
+          for pais in $PAISES; do
+            echo "Gerando arquivo para $pais..."
+            
+            # Baixa a lista do IPdeny
+            curl -s "http://www.ipdeny.com/ipblocks/data/countries/${pais}.zone" | \
+            
+            # Converte para formato RSC do MikroTik
+            awk -v pais="$pais" 'NF {
+              print "/ip firewall address-list add list=malicioso address="$1" comment=\"GeoIP-"pais"\""
+            }' > ${pais}.rsc
+            
+            echo "✓ ${pais}.rsc gerado com $(wc -l < ${pais}.rsc) linhas"
+          done
+          
+          # Cria um arquivo com data da última atualização
+          echo "# Última atualização: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" > LAST_UPDATE.txt
+          
+      - name: Commit and push changes
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add *.rsc LAST_UPDATE.txt
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update GeoIP lists - $(date +'%Y-%m-%d')" && git push)
