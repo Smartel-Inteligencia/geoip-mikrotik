@@ -8785,6 +8785,7 @@
 /ip firewall address-list add list=malicioso address=91.233.17.0/24 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=103.124.182.0/23 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=103.250.172.0/22 comment="GeoIP-cn"
+/ip firewall address-list add list=malicioso address=104.167.17.0/24 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=178.236.224.0/20 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=185.2.48.0/22 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=185.7.175.0/24 comment="GeoIP-cn"
