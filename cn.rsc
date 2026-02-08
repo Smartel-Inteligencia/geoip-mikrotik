@@ -6223,6 +6223,7 @@
 /ip firewall address-list add list=malicioso address=151.158.72.0/23 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=151.158.78.0/23 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=151.158.80.0/23 comment="GeoIP-cn"
+/ip firewall address-list add list=malicioso address=151.158.122.0/23 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=152.104.128.0/17 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=152.136.0.0/16 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=153.0.0.0/16 comment="GeoIP-cn"
