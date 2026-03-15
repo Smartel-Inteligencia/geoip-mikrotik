@@ -977,6 +977,7 @@
 /ip firewall address-list add list=malicioso address=185.63.114.0/24 comment="GeoIP-ir"
 /ip firewall address-list add list=malicioso address=185.63.236.0/22 comment="GeoIP-ir"
 /ip firewall address-list add list=malicioso address=185.64.176.0/22 comment="GeoIP-ir"
+/ip firewall address-list add list=malicioso address=185.65.118.0/24 comment="GeoIP-ir"
 /ip firewall address-list add list=malicioso address=185.66.224.0/22 comment="GeoIP-ir"
 /ip firewall address-list add list=malicioso address=185.66.228.0/22 comment="GeoIP-ir"
 /ip firewall address-list add list=malicioso address=185.67.12.0/22 comment="GeoIP-ir"
