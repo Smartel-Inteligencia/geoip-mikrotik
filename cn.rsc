@@ -6400,6 +6400,7 @@
 /ip firewall address-list add list=malicioso address=163.125.0.0/16 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=163.128.30.0/23 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=163.128.152.0/23 comment="GeoIP-cn"
+/ip firewall address-list add list=malicioso address=163.128.236.0/23 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=163.142.0.0/16 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=163.177.0.0/16 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=163.179.0.0/16 comment="GeoIP-cn"
