@@ -1941,7 +1941,6 @@
 /ip firewall address-list add list=malicioso address=194.59.248.0/22 comment="GeoIP-ro"
 /ip firewall address-list add list=malicioso address=194.61.80.0/24 comment="GeoIP-ro"
 /ip firewall address-list add list=malicioso address=194.61.82.0/23 comment="GeoIP-ro"
-/ip firewall address-list add list=malicioso address=194.61.156.0/23 comment="GeoIP-ro"
 /ip firewall address-list add list=malicioso address=194.62.2.0/23 comment="GeoIP-ro"
 /ip firewall address-list add list=malicioso address=194.62.122.0/23 comment="GeoIP-ro"
 /ip firewall address-list add list=malicioso address=194.62.126.0/23 comment="GeoIP-ro"

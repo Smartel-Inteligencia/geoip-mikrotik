@@ -1435,6 +1435,7 @@
 /ip firewall address-list add list=malicioso address=161.248.212.0/23 comment="GeoIP-vn"
 /ip firewall address-list add list=malicioso address=161.248.236.0/23 comment="GeoIP-vn"
 /ip firewall address-list add list=malicioso address=161.248.238.0/23 comment="GeoIP-vn"
+/ip firewall address-list add list=malicioso address=162.4.8.0/23 comment="GeoIP-vn"
 /ip firewall address-list add list=malicioso address=163.44.192.0/22 comment="GeoIP-vn"
 /ip firewall address-list add list=malicioso address=163.44.200.0/24 comment="GeoIP-vn"
 /ip firewall address-list add list=malicioso address=163.44.204.0/22 comment="GeoIP-vn"
