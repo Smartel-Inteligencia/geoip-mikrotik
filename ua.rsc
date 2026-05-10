@@ -1027,6 +1027,7 @@
 /ip firewall address-list add list=malicioso address=213.231.0.0/18 comment="GeoIP-ua"
 /ip firewall address-list add list=malicioso address=213.232.234.0/24 comment="GeoIP-ua"
 /ip firewall address-list add list=malicioso address=217.9.0.0/20 comment="GeoIP-ua"
+/ip firewall address-list add list=malicioso address=217.18.51.0/24 comment="GeoIP-ua"
 /ip firewall address-list add list=malicioso address=217.18.216.0/22 comment="GeoIP-ua"
 /ip firewall address-list add list=malicioso address=217.24.160.0/20 comment="GeoIP-ua"
 /ip firewall address-list add list=malicioso address=217.25.192.0/20 comment="GeoIP-ua"
