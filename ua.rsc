@@ -256,6 +256,7 @@
 /ip firewall address-list add list=malicioso address=82.117.246.0/23 comment="GeoIP-ua"
 /ip firewall address-list add list=malicioso address=82.117.248.0/22 comment="GeoIP-ua"
 /ip firewall address-list add list=malicioso address=82.144.192.0/19 comment="GeoIP-ua"
+/ip firewall address-list add list=malicioso address=82.158.192.0/20 comment="GeoIP-ua"
 /ip firewall address-list add list=malicioso address=82.207.0.0/17 comment="GeoIP-ua"
 /ip firewall address-list add list=malicioso address=83.97.76.0/24 comment="GeoIP-ua"
 /ip firewall address-list add list=malicioso address=83.137.88.0/21 comment="GeoIP-ua"

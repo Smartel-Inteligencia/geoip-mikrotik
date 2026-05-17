@@ -6355,6 +6355,7 @@
 /ip firewall address-list add list=malicioso address=161.248.112.0/23 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=161.248.136.0/23 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=162.4.54.0/23 comment="GeoIP-cn"
+/ip firewall address-list add list=malicioso address=162.4.136.0/23 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=162.14.0.0/16 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=162.105.0.0/16 comment="GeoIP-cn"
 /ip firewall address-list add list=malicioso address=163.0.0.0/16 comment="GeoIP-cn"
