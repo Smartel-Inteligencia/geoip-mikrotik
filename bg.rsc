@@ -1590,6 +1590,7 @@
 /ip firewall address-list add list=malicioso address=31.41.20.0/22 comment="GeoIP-bg"
 /ip firewall address-list add list=malicioso address=62.44.96.0/19 comment="GeoIP-bg"
 /ip firewall address-list add list=malicioso address=62.182.112.0/21 comment="GeoIP-bg"
+/ip firewall address-list add list=malicioso address=64.30.158.0/24 comment="GeoIP-bg"
 /ip firewall address-list add list=malicioso address=79.110.112.0/21 comment="GeoIP-bg"
 /ip firewall address-list add list=malicioso address=81.161.240.0/20 comment="GeoIP-bg"
 /ip firewall address-list add list=malicioso address=83.97.24.0/21 comment="GeoIP-bg"
