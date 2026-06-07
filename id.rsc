@@ -5212,6 +5212,7 @@
 /ip firewall address-list add list=malicioso address=162.4.167.0/24 comment="GeoIP-id"
 /ip firewall address-list add list=malicioso address=162.4.182.0/24 comment="GeoIP-id"
 /ip firewall address-list add list=malicioso address=162.4.183.0/24 comment="GeoIP-id"
+/ip firewall address-list add list=malicioso address=162.4.212.0/23 comment="GeoIP-id"
 /ip firewall address-list add list=malicioso address=163.47.22.0/24 comment="GeoIP-id"
 /ip firewall address-list add list=malicioso address=163.47.25.0/24 comment="GeoIP-id"
 /ip firewall address-list add list=malicioso address=163.47.28.0/24 comment="GeoIP-id"
