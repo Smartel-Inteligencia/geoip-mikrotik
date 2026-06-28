@@ -403,6 +403,7 @@
 /ip firewall address-list add list=malicioso address=84.238.240.0/20 comment="GeoIP-bg"
 /ip firewall address-list add list=malicioso address=84.242.128.0/18 comment="GeoIP-bg"
 /ip firewall address-list add list=malicioso address=84.252.0.0/18 comment="GeoIP-bg"
+/ip firewall address-list add list=malicioso address=85.8.205.0/24 comment="GeoIP-bg"
 /ip firewall address-list add list=malicioso address=85.11.128.0/18 comment="GeoIP-bg"
 /ip firewall address-list add list=malicioso address=85.14.0.0/18 comment="GeoIP-bg"
 /ip firewall address-list add list=malicioso address=85.31.44.0/22 comment="GeoIP-bg"
