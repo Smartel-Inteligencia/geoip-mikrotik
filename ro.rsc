@@ -1271,6 +1271,7 @@
 /ip firewall address-list add list=malicioso address=94.24.110.0/24 comment="GeoIP-ro"
 /ip firewall address-list add list=malicioso address=94.24.111.0/24 comment="GeoIP-ro"
 /ip firewall address-list add list=malicioso address=94.52.0.0/15 comment="GeoIP-ro"
+/ip firewall address-list add list=malicioso address=94.127.16.0/24 comment="GeoIP-ro"
 /ip firewall address-list add list=malicioso address=94.154.122.0/24 comment="GeoIP-ro"
 /ip firewall address-list add list=malicioso address=94.176.2.0/24 comment="GeoIP-ro"
 /ip firewall address-list add list=malicioso address=94.176.5.0/24 comment="GeoIP-ro"
