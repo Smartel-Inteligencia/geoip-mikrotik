@@ -437,7 +437,6 @@
 /ip firewall address-list add list=malicioso address=86.105.193.0/24 comment="GeoIP-ro"
 /ip firewall address-list add list=malicioso address=86.105.195.0/24 comment="GeoIP-ro"
 /ip firewall address-list add list=malicioso address=86.105.198.0/24 comment="GeoIP-ro"
-/ip firewall address-list add list=malicioso address=86.105.204.0/23 comment="GeoIP-ro"
 /ip firewall address-list add list=malicioso address=86.105.206.0/23 comment="GeoIP-ro"
 /ip firewall address-list add list=malicioso address=86.105.214.0/24 comment="GeoIP-ro"
 /ip firewall address-list add list=malicioso address=86.105.216.0/22 comment="GeoIP-ro"

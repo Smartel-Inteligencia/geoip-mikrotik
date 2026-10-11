@@ -381,6 +381,7 @@
 /ip firewall address-list add list=malicioso address=85.209.40.0/24 comment="GeoIP-ir"
 /ip firewall address-list add list=malicioso address=85.209.41.0/24 comment="GeoIP-ir"
 /ip firewall address-list add list=malicioso address=85.239.192.0/19 comment="GeoIP-ir"
+/ip firewall address-list add list=malicioso address=86.54.42.0/24 comment="GeoIP-ir"
 /ip firewall address-list add list=malicioso address=86.55.0.0/16 comment="GeoIP-ir"
 /ip firewall address-list add list=malicioso address=86.57.0.0/17 comment="GeoIP-ir"
 /ip firewall address-list add list=malicioso address=86.104.32.0/20 comment="GeoIP-ir"
